@@ -1,0 +1,5 @@
+1.) select product.product_name,buyers.buyer_name,buyers.quantity from product LEFT OUTER JOIN buyers on buyers.pid=product.id;
+
+2.) alter table buyers add constraint id primary key;
+
+3.) select buyer_name from buyers where quantity=id;

@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+
+open(DATA,"<file.txt");
+open(DATA1,">file1.txt");
+
+while(<DATA>){
+print DATA1 $_;
+}
+close(DATA);
+close(DATA1);

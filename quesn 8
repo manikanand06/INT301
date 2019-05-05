@@ -1,0 +1,10 @@
+1.) select *from table1 JOIN table2 on table1.firstname=table2.firstname; //Equi join
+    select *from table1 INNER JOIN table2 on table1.firstname=table2.firstname; //Inner Join
+
+2.) alter table table2 add mobile bigint;
+    
+3.) select table1.firstname,table1.lastname from table1 LEFT OUTER JOIN table2 on table1.firstname=table2.firstname order by table2.city DESC;
+
+4.) select table1.firstname,table2.lastname from table1 LEFT OUTER JOIN table2 on table1.firstname=table2.firstname;
+
+

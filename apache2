@@ -1,0 +1,15 @@
+sudo htpasswd -c /etc/apache2/.htpasswd manik
+
+sudo cat /etc/apache2/.htpasswd
+
+
+sudo chown www-data:www-data /etc/apache2/.htpasswd
+
+sudo chmod 0660 /etc/apache2/.htpasswd
+
+sudo gedit /var/www/html/.htaccess
+
+AuthType Basic
+AuthName "Restricted Content"
+AuthUserFile /etc/apache2/.htpasswd
+Require valid-user

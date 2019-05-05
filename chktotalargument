@@ -1,0 +1,5 @@
+if [ $# -gt 5 ]
+then 
+echo "Arguments is greater than 5."
+fi
+

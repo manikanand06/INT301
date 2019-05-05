@@ -1,0 +1,47 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "123";
+$dbname = "db1";
+
+
+
+
+$conn = new mysqli($servername, $username, $password,$dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+else
+echo "connection has been established-------\n";
+
+
+$sql = "CREATE DATABASE DB2";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully--------\n";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
+$sql = "CREATE TABLE Employee(
+id INT(6) PRIMARY KEY, 
+firstname VARCHAR(30) NOT NULL,
+lastname VARCHAR(30) NOT NULL,
+email VARCHAR(50)
+)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table Employee created successfully----------\n";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+$sql = "INSERT INTO Employee (id,firstname, lastname, email)
+VALUES (21,'Naaz', 'Singh', 'naaz@gmail.com')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Values inserted successfully----------";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>

@@ -1,0 +1,12 @@
+1.) select teacher_id from assigned_to where course_id='INT305';
+
+2.) select teacher.teacher_name,assigned_to.teacher_id from teacher 
+LEFT OUTER JOIN assigned_to 
+on teacher.teacher_id=assigned_to.teacher_id 
+where assigned_to.course_id='INT301' OR assigned_to.course_id='INT305';
+
+3.) update course set course_id='OST' where course_id='open source';
+
+4.) alter table course add credis int;
+
+5.) alter table course add constraint course_id primary key;

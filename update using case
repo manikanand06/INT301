@@ -1,0 +1,6 @@
+update student
+set grade=CASE
+WHEN cgpa>9 then 'O'
+WHEN cgpa>8 and cgpa<9 then 'A'
+ELSE 'F'
+END;
